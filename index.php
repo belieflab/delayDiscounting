@@ -12,6 +12,7 @@ file_put_contents($name, $data);
 <html>
   <head>
     <title>Self-Deception Task</title>
+    <script src="js/saveData.js"></script>
     <script src="jsPsych/jspsych.js"></script>
     <script src="jsPsych/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="jsPsych/plugins/jspsych-image-keyboard-response.js"></script>
@@ -110,13 +111,13 @@ file_put_contents($name, $data);
 
     let thank_1 = {
       type:"html-keyboard-response",
-      stimulus: '<p>Thank you for agreeing to participate in the study</p>'
+      stimulus: '<p>Thank you for agreeing to participate in the study.</p>'
     }
     timeline.push(thank_1)
 
     let instr_1 = {
       type:"html-keyboard-response",
-      stimulus:'<p>In the following task, you will be asked to pretend to choose between earning either<br></p>'+
+      stimulus:'<p>In the following task, you will be asked to pretend to choose between earning either:<br></p>'+
       '<p>A) a little money now <br></p>'+
       '<p> B) a little more money, later</p>'
     }
@@ -125,7 +126,7 @@ file_put_contents($name, $data);
     let instr_2 = {
       type:"html-keyboard-response",
       stimulus:'<p>There are no right or wrong answers.<br></p>'+
-      '<p> Please take your time, and respond as truthfully as you can</p>'
+      '<p> Please take your time, and respond as truthfully as you can.</p>'
     }
     timeline.push(instr_2)
 
@@ -137,7 +138,8 @@ file_put_contents($name, $data);
 
     let instr_4 = {
       type:"html-keyboard-response",
-      stimulus:'<p>Get ready...</p>'
+      stimulus:'<p>Get ready...</p>',
+      trial_duration: 5000,
     }
     timeline.push(instr_4)
 
@@ -155,7 +157,7 @@ file_put_contents($name, $data);
       ' after '+`${days[i]}`+' days... (Press 0)</p>'
       )
     };
-    console.log(stim_array);
+    // console.log(stim_array);
     //5 sec delay in end of the ready to begin task and first item
     // 1 sec ISI delay 
     
@@ -183,7 +185,6 @@ file_put_contents($name, $data);
         {stimulus: stim_array[5], 
         data: {test_part: 'experiment', 
         correct_response: '.'}},
-
 
         {stimulus: stim_array[6], 
         data: {test_part: 'experiment', 
@@ -298,17 +299,9 @@ file_put_contents($name, $data);
 
     timeline.push(procedures);
 
+
     /* END TRAINING TRIAL FOR PARTICIPANTS */
 
-    let instructions_4 = {
-      type: "html-keyboard-response",
-      stimulus: '<p>Let us begin! Press the space bar when you are ready to start block 1 of 4.</p> ',
-      choices: [32], //ASCII spacebar
-      post_trial_gap: 2000
-    };
-    timeline.push(instructions_4);
-
-    
 
 /*   var debrief_block = {
       type: "html-keyboard-response",
@@ -329,25 +322,20 @@ file_put_contents($name, $data);
 
     // COMPLETION MESSAGE: Completed Classification Phase
     // var link = "https://survey.az1.qualtrics.com/SE/?SID=SV_9uARDX1aXEXq1pP&Q_JFE=0&workerId="
-    let instructions_16 = {
+    let thankyou = {
       type: "html-keyboard-response",
-      stimulus: '<p">Thank you</p>' 
+      stimulus: '<p">Thank you.</p>', 
           // +"<a href=" + link + ' target="_blank">' + link + "</a>",
       // choices: jsPsych.NO_KEYS,
-      // trial_duration: 40000
+      trial_duration: 5000,
     };
-    timeline.push(instructions_16);
+    timeline.push(thankyou);
 
 
 
     /* END PHASE II OF TASK: CLASSIFICATION and ANTICIPATION PHASE */
 
-function saveData(name, data){
-  let xhr = new XMLHttpRequest();
-  xhr.open('POST', 'index.php'); // 'write_data.php' is the path to the php file described above.
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send(JSON.stringify({filename: name, filedata: data}));
-}
+
 
 //var this_seed = new Date().getTime();
     //Math.seedrandom(this_seed);
@@ -383,11 +371,7 @@ function saveData(name, data){
 
 <footer>
 
-<!-- <script type="text/javascript" src="https://perceptionexperiments.net/SDU/Libraries/Timeout.js"></script> -->
-<!-- <script type="text/javascript" src="https://perceptionexperiments.net/SDU/Libraries/lodash.js"></script> -->
-<!-- <script type="text/javascript" src="https://perceptionexperiments.net/SDU/Libraries/seedrandom.js"></script> -->
 <script type="text/javascript" src="//code.jquery.com/jquery-git.js"></script>
-<!-- <script type="text/javascript" src="https://perceptionexperiments.net/SDU/Libraries/jquery.csv.js"></script> -->
 
 <script>
 // show page when loaded 
