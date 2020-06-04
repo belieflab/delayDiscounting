@@ -13,6 +13,7 @@ file_put_contents($name, $data);
   <head>
     <title>Self-Deception Task</title>
     <script src="js/saveData.js"></script>
+    <script src="js/countdown.js"></script>
     <script src="jsPsych/jspsych.js"></script>
     <script src="jsPsych/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="jsPsych/plugins/jspsych-image-keyboard-response.js"></script>
@@ -102,10 +103,28 @@ file_put_contents($name, $data);
     /* create timeline */
     let timeline = [];
 
+    var seconds = 60;
+    var mins = 1;
+
+    // function tick() {
+    //     //This script expects an element with an ID = "counter". You can change that to what ever you want. 
+    //     var counter = document.getElementById("counter");
+    //     var current_minutes = mins-1
+    //     seconds--;
+    //     counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+    //     if( seconds > 0 ) {
+    //         setTimeout(tick, 1000);
+    //     } else {
+    //         if(mins > 1){
+    //             countdown(mins-1);           
+    //         }
+    //     }
+    // }
+
     /* define welcome message trial */
     let welcome = {
       type: "html-keyboard-response",
-      stimulus: '<h3 style="color:blue;">Welcome to the experiment!</h3> <p>Press any key to begin.</p>'
+      stimulus: '<h3 style="color:blue;">Welcome to the experiment!</h3> <p>Press any key to begin.</p>',
     };
     timeline.push(welcome);
 
@@ -125,6 +144,7 @@ file_put_contents($name, $data);
       '<p><strong>a little more money, later</strong></p>'+
       '<br>'+
       '<p>Press the spacebar continue.</p>',
+      choices: [32],
     }
     timeline.push(instr_1)
 
@@ -150,10 +170,21 @@ file_put_contents($name, $data);
 
     let instr_4 = {
       type:"html-keyboard-response",
-      stimulus:'<p>Get ready...</p>',
-      trial_duration: 5000,
+      // stimulus:'<p style="color:black;" id="countdown">00:30</p>',
+      stimulus: '<p style="color:black;"> Get Ready...</p>',
+      
+      trial_duration: 2000,
     }
     timeline.push(instr_4)
+
+    let instr_5 = {
+      type:"html-keyboard-response",
+      stimulus:'<p style="color:black; font-size:60px;" id="countdown"></p>',
+      trial_duration: 5000,
+      on_load: timer(),
+      }
+    timeline.push(instr_5)
+
 
 
     /* START TRAINING TRIAL FOR PARTICIPANTS */
@@ -288,7 +319,7 @@ file_put_contents($name, $data);
       stimulus: '<div style="font-size:60px;">+</div>',
       choices: jsPsych.NO_KEYS,
       trial_duration: 1000,
-      data: {test_part: 'fixation'}
+      data: {test_part: 'fixation'},
     }
 
     let experiment = {
@@ -306,7 +337,7 @@ file_put_contents($name, $data);
     let procedures = {
       timeline: [fixation, experiment],
       timeline_variables: main_stimuli,
-      randomize_order: false
+      randomize_order: false,
     }
 
     timeline.push(procedures);

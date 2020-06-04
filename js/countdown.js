@@ -1,11 +1,10 @@
-function getReady(){
-    let array = [5,4,3,2,1];
-    function timer(){
-        array.forEach((element) => {
-            console.log(element);
-        })
-    };  
-    timer();
-    setInterval(timer, 1000);
-}
-getReady()
+function timer(){ // initialize timer
+    var sec = 5; // set timer in seconds
+    var timer = setInterval(function(){
+    document.getElementById('countdown').innerHTML=sec;
+    sec--;
+    if (sec < -1) {
+      jsPsych.endCurrentTimeline();
+      }
+    }, 1000);
+  }
