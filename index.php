@@ -142,40 +142,6 @@ file_put_contents($name, $data);
     timeline.push(instr_4)
 
 
-    /* define instructions trial */
-    let instructions_1 = {
-      type: "html-keyboard-response",
-      stimulus: '<p>You will see a series of abstract figures. They are adaptations of signs in the Korean alphabet, but that is not important for this study. </p>' +
-        '<p>Abstract figures sometimes have a more masculine or feminine shape. Here, each figure has already been assigned a gender '+
-        'as <q>Male</q> or <q>Female</q> by a panel of respondents in a pilot study. The respondents were not given specific instructions on how to do this, '+
-        'but were only told to use their intuition and to take into account the entire configuration of the stimulus. </p>'+
-        '<p>Your task now is to guess the assigned gender of each figure. Please press the corresponding response keys to indicate your choice: </p>'+
-        '<p style="color:blue;"> Male &#8594 <q>1</q> (1 key)</p>'+
-        '<p style="color:blue;"> Female &#8594 <q>0</q> (0 key)</p>'+
-        '<p style>Press either response keys to continue.</p>',
-      choices: ['1', '0'],
-    };
-    timeline.push(instructions_1);
-
-    let instructions_2 = {
-      type: "html-keyboard-response",
-      stimulus: '<p>Your choice is correct if it matches the gender assigned by the majority of respondents in the pilot study.</p> ' +
-          '<p>For each correct choice you will receive 2 cents. There will be 200 trials divided into 4 blocks of 50 trials. You will be able to take a break after every 50 trials.</p> ' +
-          '<p>Press the space bar to continue.</p>',
-      choices: [32],
-    };
-    timeline.push(instructions_2);
-
-    let instructions_3 = {
-      type: "html-keyboard-response",
-      stimulus: '<p>Here are some examples.</p> ' +
-          '<p>For each, guess whether the assigned figure is male-like or female-like and indicate your choice by pressing either response keys.</p> ' +
-          '<p>Press the space bar to continue.</p>',
-      choices: [32],
-      post_trial_gap: 2000
-    };
-    timeline.push(instructions_3);
-
     /* START TRAINING TRIAL FOR PARTICIPANTS */
 
     let now = [54,55,19,31,14,47,15,25,78,40,11,67,34,27,69,49,80,24,33,28,34,25,41,54,54,22,20];
