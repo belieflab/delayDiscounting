@@ -19,7 +19,7 @@ file_put_contents($name, $data);
     <link href="jsPsych/css/jspsych.css" rel="stylesheet" type="text/css"></link>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body  style="background-color:lightgrey;">  
+  <body  style="background-color: white;">  
   
   <div class="loading centeredDiv">
     <h1 class="loading">Loading...</h1>
@@ -111,28 +111,40 @@ file_put_contents($name, $data);
 
     let thank_1 = {
       type:"html-keyboard-response",
-      stimulus: '<p>Thank you for agreeing to participate in the study.</p>'
+      stimulus: '<p>Thank you for agreeing to participate in the study.</p>'+
+      '<p>Press the spacebar continue.</p>',
+      choices: [32],
     }
     timeline.push(thank_1)
 
     let instr_1 = {
       type:"html-keyboard-response",
-      stimulus:'<p>In the following task, you will be asked to pretend to choose between earning either:<br></p>'+
-      '<p>A) a little money now <br></p>'+
-      '<p> B) a little more money, later</p>'
+      stimulus:'<p>In the following task, you will be asked to pretend to choose between earning either:<br><br></p>'+
+      '<p><strong>a little money now</strong><br></p>'+
+      '<p>or</p>'+
+      '<p><strong>a little more money, later</strong></p>'+
+      '<br>'+
+      '<p>Press the spacebar continue.</p>',
     }
     timeline.push(instr_1)
 
     let instr_2 = {
       type:"html-keyboard-response",
-      stimulus:'<p>There are no right or wrong answers.<br></p>'+
-      '<p> Please take your time, and respond as truthfully as you can.</p>'
+      stimulus:'<p>To make your selection on each trial:<br></p>'+
+      '<p><strong>press the <u>1</u> key</strong><br></p>'+
+      '<p>or</p>'+
+      '<p><strong>press the <u>0</u> key</strong><br><br>'+
+      '<p>Press either of the response keys to continue.</p>',
+      choices: ['1', '0'],
     }
     timeline.push(instr_2)
 
     let instr_3 = {
       type:"html-keyboard-response",
-      stimulus:'<p>Do you have any questions before we begin?</p>'
+      stimulus:'<p>There are no right or wrong answers.<br></p>'+
+      '<p> Please take your time, and respond as truthfully as you can.</p>'+
+      '<p>Press the spacebar continue.</p>',
+      choices: [32],
     }
     timeline.push(instr_3)
 
@@ -152,9 +164,9 @@ file_put_contents($name, $data);
     let stim_array = [];
     for (let i = 0; i < now.length; i++) { 
       stim_array.push
-      ('<h1 style="color:blue;"><i>Which would you prefer?</i></h1><br><p">$'
-      +`${now[i]}`+' now...  (Press 1)</p>'+'<p style="color:blue;">OR</p>'+'<p>$' +`${after[i]}`+
-      ' after '+`${days[i]}`+' days... (Press 0)</p>'
+      ('<h1 style="color:blue;"><i>Which would you prefer?</i></h1><br><p class="bold">$'
+      +`${now[i]}`+' now...&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  (Press 1)</p>'+'<p style="color:black;">or</p>'+'<p class="bold">$' +`${after[i]}`+
+      ' after '+`${days[i]}`+' days...&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp (Press 0)</p>'
       )
     };
     // console.log(stim_array);
