@@ -102,28 +102,62 @@ file_put_contents($name, $data);
     let timeline = [];
 
     /* define welcome message trial */
-    var welcome = {
+    let welcome = {
       type: "html-keyboard-response",
-      stimulus: '<p>Welcome to the experiment! Press any key to begin.</p>'
+      stimulus: '<h3 style="color:blue;">Welcome to the experiment!</h3> <p>Press any key to begin.</p>'
     };
     timeline.push(welcome);
 
+    let thank_1 = {
+      type:"html-keyboard-response",
+      stimulus: '<p>Thank you for agreeing to participate in the study</p>'
+    }
+    timeline.push(thank_1)
+
+    let instr_1 = {
+      type:"html-keyboard-response",
+      stimulus:'<p>In the following task, you will be asked to pretend to choose between earning either<br></p>'+
+      '<p>A) a little money now <br></p>'+
+      '<p> B) a little more money, later</p>'
+    }
+    timeline.push(instr_1)
+
+    let instr_2 = {
+      type:"html-keyboard-response",
+      stimulus:'<p>There are no right or wrong answers.<br></p>'+
+      '<p> Please take your time, and respond as truthfully as you can</p>'
+    }
+    timeline.push(instr_2)
+
+    let instr_3 = {
+      type:"html-keyboard-response",
+      stimulus:'<p>Do you have any questions before we begin?</p>'
+    }
+    timeline.push(instr_3)
+
+    let instr_4 = {
+      type:"html-keyboard-response",
+      stimulus:'<p>Get ready...</p>'
+    }
+    timeline.push(instr_4)
+
+
     /* define instructions trial */
-    var instructions_1 = {
+    let instructions_1 = {
       type: "html-keyboard-response",
       stimulus: '<p>You will see a series of abstract figures. They are adaptations of signs in the Korean alphabet, but that is not important for this study. </p>' +
         '<p>Abstract figures sometimes have a more masculine or feminine shape. Here, each figure has already been assigned a gender '+
         'as <q>Male</q> or <q>Female</q> by a panel of respondents in a pilot study. The respondents were not given specific instructions on how to do this, '+
         'but were only told to use their intuition and to take into account the entire configuration of the stimulus. </p>'+
         '<p>Your task now is to guess the assigned gender of each figure. Please press the corresponding response keys to indicate your choice: </p>'+
-        '<p> Male &#8594 <q>1</q> (1 key)</p>'+
-        '<p> Female &#8594 <q>0</q> (0 key)</p>'+
+        '<p style="color:blue;"> Male &#8594 <q>1</q> (1 key)</p>'+
+        '<p style="color:blue;"> Female &#8594 <q>0</q> (0 key)</p>'+
         '<p style>Press either response keys to continue.</p>',
       choices: ['1', '0'],
     };
     timeline.push(instructions_1);
 
-    var instructions_2 = {
+    let instructions_2 = {
       type: "html-keyboard-response",
       stimulus: '<p>Your choice is correct if it matches the gender assigned by the majority of respondents in the pilot study.</p> ' +
           '<p>For each correct choice you will receive 2 cents. There will be 200 trials divided into 4 blocks of 50 trials. You will be able to take a break after every 50 trials.</p> ' +
@@ -132,7 +166,7 @@ file_put_contents($name, $data);
     };
     timeline.push(instructions_2);
 
-    var instructions_3 = {
+    let instructions_3 = {
       type: "html-keyboard-response",
       stimulus: '<p>Here are some examples.</p> ' +
           '<p>For each, guess whether the assigned figure is male-like or female-like and indicate your choice by pressing either response keys.</p> ' +
@@ -150,8 +184,8 @@ file_put_contents($name, $data);
     let stim_array = [];
     for (let i = 0; i < now.length; i++) { 
       stim_array.push
-      ('<h1 style="color:blue;"><i>Which would you prefer?</i></h1><br><p style="font-size:25px;">$'
-      +`${now[i]}`+' now...  (Press 1)</p><br><h3 style="color:blue;">OR</h3><br><p style="font-size:25px;">$'+`${after[i]}`+
+      ('<h1 style="color:blue;"><i>Which would you prefer?</i></h1><br><p">$'
+      +`${now[i]}`+' now...  (Press 1)</p>'+'<p style="color:blue;">OR</p>'+'<p>$' +`${after[i]}`+
       ' after '+`${days[i]}`+' days... (Press 0)</p>'
       )
     };
@@ -159,7 +193,7 @@ file_put_contents($name, $data);
     //5 sec delay in end of the ready to begin task and first item
     // 1 sec ISI delay 
     
-    var main_stimuli = [
+    let main_stimuli = [
         {stimulus: stim_array[0], 
         data: {test_part: 'experiment', 
         correct_response: ','}},
@@ -270,7 +304,7 @@ file_put_contents($name, $data);
         correct_response: '.'}}
     ]
 
-    var fixation = {
+    let fixation = {
       type: 'html-keyboard-response',
       stimulus: '<div style="font-size:60px;">+</div>',
       choices: jsPsych.NO_KEYS,
@@ -278,7 +312,7 @@ file_put_contents($name, $data);
       data: {test_part: 'fixation'}
     }
 
-    var experiment = {
+    let experiment = {
       type: "html-keyboard-response",
       stimulus: jsPsych.timelineVariable('stimulus'), //train_stimuli_array, //jsPsych.timelineVariable('stimulus'),
       choices: ['1', '0'],
@@ -290,7 +324,7 @@ file_put_contents($name, $data);
       }
     }
 
-    var procedures = {
+    let procedures = {
       timeline: [fixation, experiment],
       timeline_variables: main_stimuli,
       randomize_order: false
@@ -300,7 +334,7 @@ file_put_contents($name, $data);
 
     /* END TRAINING TRIAL FOR PARTICIPANTS */
 
-    var instructions_4 = {
+    let instructions_4 = {
       type: "html-keyboard-response",
       stimulus: '<p>Let us begin! Press the space bar when you are ready to start block 1 of 4.</p> ',
       choices: [32], //ASCII spacebar
@@ -328,14 +362,13 @@ file_put_contents($name, $data);
      timeline.push(debrief_block); */
 
     // COMPLETION MESSAGE: Completed Classification Phase
-    var link = "https://survey.az1.qualtrics.com/SE/?SID=SV_9uARDX1aXEXq1pP&Q_JFE=0&workerId="
-    var instructions_16 = {
+    // var link = "https://survey.az1.qualtrics.com/SE/?SID=SV_9uARDX1aXEXq1pP&Q_JFE=0&workerId="
+    let instructions_16 = {
       type: "html-keyboard-response",
-      stimulus: '<p>You have now completed the task! Saving data...PLEASE DO NOT CLOSE THIS BROWSER until you complete the second part.</p> ' +
-          '<p>BEFORE THE LINK DISAPPEARS please move on to the second part of the task at this link to obtain your completion code:</p> ' +
-          "<a href=" + link + ' target="_blank">' + link + "</a>",
-      choices: jsPsych.NO_KEYS,
-      trial_duration: 40000
+      stimulus: '<p">Thank you</p>' 
+          // +"<a href=" + link + ' target="_blank">' + link + "</a>",
+      // choices: jsPsych.NO_KEYS,
+      // trial_duration: 40000
     };
     timeline.push(instructions_16);
 
@@ -344,7 +377,7 @@ file_put_contents($name, $data);
     /* END PHASE II OF TASK: CLASSIFICATION and ANTICIPATION PHASE */
 
 function saveData(name, data){
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open('POST', 'index.php'); // 'write_data.php' is the path to the php file described above.
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({filename: name, filedata: data}));
@@ -358,15 +391,15 @@ function saveData(name, data){
     function getParamFromURL(name)
     {
       name = name.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");
-      var regexS = "[\?&]"+name+"=([^&#]*)";
-      var regex = new RegExp( regexS );
-      var results = regex.exec( window.location.href );
+      let regexS = "[\?&]"+name+"=([^&#]*)";
+      let regex = new RegExp( regexS );
+      let results = regex.exec( window.location.href );
       if( results == null )
         return "";
       else
         return results[1];
     }
-    var workerID = prompt("Enter your subject id" );
+    let workerID = prompt("Enter your subject id" );
 
     /* start the experiment */
     function startExperiment(){
