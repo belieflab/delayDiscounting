@@ -11,7 +11,7 @@ file_put_contents($name, $data);
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Self-Deception Task</title>
+    <title>Delay Discounting</title>
     <script src="js/saveData.js"></script>
     <script src="js/countdown.js"></script>
     <script src="jsPsych/jspsych.js"></script>
