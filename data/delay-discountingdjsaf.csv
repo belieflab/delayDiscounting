@@ -1,0 +1,8 @@
+"rt","stimulus","key_press","trial_type","trial_index","time_elapsed","internal_node_id"
+"825.3249999979744","<h3 style=""color:blue;"">Welcome to the experiment!</h3> <p>Press any key to begin.</p>","32","html-keyboard-response","0","829","0.0-0.0"
+"207.90499999566237","<p>Thank you for agreeing to participate in the study.</p><p>Press the spacebar continue.</p>","32","html-keyboard-response","1","1037","0.0-1.0"
+"209.2449999981909","<p>In the following task, you will be asked to pretend to choose between earning either:<br><br></p><p><strong>a little money now</strong><br></p><p>or</p><p><strong>a little more money, later</strong></p><br><p>Press the spacebar continue.</p>","32","html-keyboard-response","2","1248","0.0-2.0"
+"1167.634999997972","<p>To make your selection on each trial:<br></p><p><strong>press the <u>1</u> key</strong><br></p><p>or</p><p><strong>press the <u>0</u> key</strong><br><br><p>Press either of the response keys to continue.</p>","48","html-keyboard-response","3","2416","0.0-3.0"
+"1267.5949999975273","<p>There are no right or wrong answers.<br></p><p> Please take your time, and respond as truthfully as you can.</p><p>Press the spacebar continue.</p>","32","html-keyboard-response","4","3685","0.0-4.0"
+"369.03000000165775","<p style=""color:black;""> Get Ready...</p>","32","html-keyboard-response","5","4054","0.0-5.0"
+"null","<p style=""color:black; font-size:60px;"" id=""countdown""></p>","null","html-keyboard-response","6","11057","0.0-6.0"

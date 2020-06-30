@@ -180,7 +180,7 @@ file_put_contents($name, $data);
     let instr_5 = {
       type:"html-keyboard-response",
       stimulus:'<p style="color:black; font-size:60px;" id="countdown"></p>',
-      trial_duration: 5000,
+      trial_duration: 6000,
       on_load: timer(),
       }
     timeline.push(instr_5)
