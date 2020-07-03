@@ -227,7 +227,7 @@ file_put_contents($name, $data);
       type: 'html-keyboard-response',
       stimulus: '<div style="font-size:60px;">+</div>',
       choices: jsPsych.NO_KEYS,
-      trial_duration: jsPsych.timelineVariable('jitter'),
+      trial_duration: 1000, //jsPsych.timelineVariable('jitter'),
       data: {test_part: 'fixation'},
     }
 
