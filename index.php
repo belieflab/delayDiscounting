@@ -25,7 +25,7 @@ file_put_contents($name, $data);
   </body>
   <footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-git.js"></script>
-    <script type="text/javascript" src="js/consent-load.js"></script>
+    <script type="text/javascript" src="js/consentLoad.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </footer>
 </html>
