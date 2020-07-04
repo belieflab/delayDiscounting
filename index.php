@@ -13,7 +13,8 @@ file_put_contents($name, $data);
   <head>
     <title>Delay Discounting</title>
     <script src="js/saveData.js"></script>
-    <script src="js/countdown.js"></script>
+    <script src="js/startExperiment.js"></script>
+
     <script src="jsPsych/jspsych.js"></script>
     <script src="jsPsych/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="jsPsych/plugins/jspsych-image-keyboard-response.js"></script>
@@ -26,6 +27,9 @@ file_put_contents($name, $data);
   <footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-git.js"></script>
     <script type="text/javascript" src="js/consentLoad.js"></script>
+    <script src="js/countdown.js"></script>
+    <script type="text/javascript" src="variables.js"></script>
+    <script type="text/javascript" src="timeline.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </footer>
 </html>
