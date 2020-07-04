@@ -1,3 +1,5 @@
+let workerID = prompt("Enter your subject id" );
+
 /* create timeline */
 let timeline = [];
 
@@ -294,7 +296,7 @@ function getParamFromURL(name)
   else
     return results[1];
 }
-let workerID = prompt("Enter your subject id" );
+
 
 /* start the experiment */
 function startExperiment(){
