@@ -13,7 +13,8 @@ file_put_contents($name, $data);
   <head>
     <title>Delay Discounting</title>
     <script src="js/saveData.js"></script>
-    <script src="js/countdown.js"></script>
+    <script src="js/startExperiment.js"></script>
+
     <script src="jsPsych/jspsych.js"></script>
     <script src="jsPsych/plugins/jspsych-html-keyboard-response.js"></script>
     <script src="jsPsych/plugins/jspsych-image-keyboard-response.js"></script>
@@ -139,7 +140,6 @@ file_put_contents($name, $data);
       on_finish: function(data){
         data.experiment = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
         //data.c1 = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
-        
       }
     }
 

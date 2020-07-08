@@ -3,7 +3,7 @@ function timer(){ // initialize timer
     var timer = setInterval(function(){
     document.getElementById('countdown').innerHTML=sec;
     sec--;
-    if (sec < -1) {
+    if (sec > 1) {
       jsPsych.endCurrentTimeline();
       }
     }, 1000);
