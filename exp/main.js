@@ -5,7 +5,7 @@ let instructions ={
 }
 
 let procedures = {
-  timeline: [fixation, experiment],
+  timeline: [fixation, trial],
   timeline_variables: main_stimuli,
   randomize_order: false,
 }

@@ -66,7 +66,7 @@ let welcome = {
     data: {test_part: 'fixation'},
   }
   
-  let experiment = {
+  let trial = {
     type: "html-keyboard-response",
     stimulus: jsPsych.timelineVariable('stimulus'), //train_stimuli_array, //jsPsych.timelineVariable('stimulus'),
     choices: ['1', '0'],
