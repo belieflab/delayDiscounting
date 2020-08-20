@@ -1,3 +1,13 @@
+<script>
+// show page when loaded 
+window.onload = function() {
+    $(".loading").css({display: "none"});
+    $(".consent").css({display: "block"});
+    $(".buttonHolder").css({display: "block"});
+  };
+</script>
+  
+
 <div class="loading centeredDiv">
     <h1 class="loading">Loading...</h1>
   </div>

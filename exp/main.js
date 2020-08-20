@@ -1,5 +1,3 @@
-let workerID = prompt("Enter your subject id" );
-
 /* define procedures trial */
 
 let instructions ={

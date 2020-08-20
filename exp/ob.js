@@ -54,7 +54,7 @@ let welcome = {
     type:"html-keyboard-response",
     stimulus:'<p style="color:black; font-size:60px;" id="countdown"></p>',
     trial_duration: 5500,
-    on_load: timer(),
+    on_start: countdown(),
     response_ends_trial: false,
     }
 
