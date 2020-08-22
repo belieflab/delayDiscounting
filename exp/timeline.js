@@ -79,7 +79,7 @@ let welcome = {
 
   let thankyou = {
     type: "html-keyboard-response",
-    stimulus: '<p">Thank you.</p>', 
+    stimulus: '<p>You have completed the experiment. Thank you.</p>', 
         // +"<a href=" + link + ' target="_blank">' + link + "</a>",
     // choices: jsPsych.NO_KEYS,
     trial_duration: 5000,

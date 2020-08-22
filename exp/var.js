@@ -17,5 +17,5 @@ let stim_array = [];
 
 let main_stimuli = [];
     for (let i =0;i<stim_array.length;i++) {
-        main_stimuli.push({stimulus: stim_array[i], data: {test_part: 'experiment', correct_response: ''}},)
+        main_stimuli.push({stimulus: stim_array[i], data: {test_part: 'experiment', correct_response: ''}})
 }
