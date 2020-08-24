@@ -9,7 +9,7 @@ let welcome = {
   let thank_1 = {
     type:"html-keyboard-response",
     stimulus: '<p>Thank you for agreeing to participate in the study.</p>'+
-    '<p>Press the spacebar continue.</p>',
+    '<p>Press the spacebar to continue.</p>',
     choices: [32],
   }
   
@@ -20,7 +20,7 @@ let welcome = {
     '<p>or</p>'+
     '<p><strong>a little more money, later</strong></p>'+
     '<br>'+
-    '<p>Press the spacebar continue.</p>',
+    '<p>Press the spacebar to continue.</p>',
     choices: [32],
   }
   
@@ -38,7 +38,7 @@ let welcome = {
     type:"html-keyboard-response",
     stimulus:'<p>There are no right or wrong answers.<br></p>'+
     '<p> Please take your time, and respond as truthfully as you can.</p>'+
-    '<p>Press the spacebar continue.</p>',
+    '<p>Press the spacebar to continue.</p>',
     choices: [32],
   }
   
