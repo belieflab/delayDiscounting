@@ -13,7 +13,7 @@ let procedures = {
 /* main  */
 timeline.push(instructions);
 timeline.push(procedures);
-timeline.push(thankyou);
+timeline.push(end);
 
 
 

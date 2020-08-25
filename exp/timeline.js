@@ -77,10 +77,10 @@ let welcome = {
     }
   }
 
-  let thankyou = {
+  let end = {
     type: "html-keyboard-response",
-    stimulus: '<p>You have completed the experiment. Thank you.</p>', 
-        // +"<a href=" + link + ' target="_blank">' + link + "</a>",
-    // choices: jsPsych.NO_KEYS,
-    trial_duration: 5000,
-  };
+    stimulus: "<p style='color:white;'>You have completed this task. Please wait for the experimenter to continue.</p>"+
+    "<p style='color:white;'>Data Saving...Do not close this window until the text dissapears.”</p>",
+    choices: jsPsych.NO_KEYS,
+    trial_duration: 10000,
+};
