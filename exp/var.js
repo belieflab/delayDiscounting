@@ -1,4 +1,4 @@
-let workerID = prompt("Enter your subject id" );
+// let workerID = prompt("Enter your subject id" );
 
 const now = [54,55,19,31,14,47,15,25,78,40,11,67,34,27,69,49,80,24,33,28,34,25,41,54,54,22,20];
 const after = [55,75,25,85,25,50,35,60,80,55,30,75,35,50,85,60,85,35,80,30,50,30,75,60,80,25,55];
