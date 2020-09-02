@@ -9,9 +9,16 @@ let jitter = [900,1000,1100]; //these will divide evenly by screen refreshes on 
 let stim_array = [];
     for (let i = 0; i < now.length; i++) { 
       stim_array.push(
-        '<h1 style="color:blue;"><i>Which would you prefer?</i></h1><br><p class="bold">$'
-        +`${now[i]}`+' now...&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  (Press 1)</p>'+'<p style="color:black;">or</p>'+'<p class="bold">$' +`${after[i]}`+
-        ' after '+`${days[i]}`+' days...&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp (Press 0)</p>'
+        '<h1 style="color:blue;"><i>Which would you prefer?</i></h1>'+
+        '<br>'+
+        '<p class="bold">$'+
+        +`${now[i]}`+ ' now...&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style=font-weight:normal;><i>or</i></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+
+        '$'+
+        +`${after[i]}`+ ' after '+`${days[i]}`+' days...</p>'+
+        // '<br>'+
+        '<p style=text-align:left;>&nbsp&nbsp&nbsp&nbsp&nbsp (Press 1) &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp (Press 0)</p>',
+        // '<p style="color:black;">or</p>'+'<p class="bold">$'
+
       )
     };
 
@@ -19,3 +26,14 @@ let main_stimuli = [];
     for (let i =0;i<stim_array.length;i++) {
         main_stimuli.push({stimulus: stim_array[i], data: {test_part: 'experiment', correct_response: ''}})
 }
+
+  
+// let instr_2 = {
+//   type:"html-keyboard-response",
+//   stimulus:'<p>To make your selection on each trial:<br></p>'+
+//   '<br>'+
+//   '<p><strong>press the <u>1</u> key</strong>&nbsp&nbsp&nbsp&nbsp&nbsp <i>or</i> &nbsp&nbsp&nbsp&nbsp&nbsp <strong>press the <u>0</u> key</strong><br><br>'+
+//   '<br>'+
+//   '<p>Press either of the response keys to continue.</p>',
+//   choices: ['1', '0'],
+// }

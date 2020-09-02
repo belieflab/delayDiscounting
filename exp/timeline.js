@@ -15,10 +15,9 @@ let welcome = {
   
   let instr_1 = {
     type:"html-keyboard-response",
-    stimulus:'<p>In the following task, you will be asked to pretend to choose between earning either:<br><br></p>'+
-    '<p><strong>a little money now</strong><br></p>'+
-    '<p>or</p>'+
-    '<p><strong>a little more money, later</strong></p>'+
+    stimulus:'<p>In the following task, you will be asked to pretend to choose between earning either:</p>'+
+    '<br>'+
+    '<p><strong>a little money now</strong>&nbsp&nbsp&nbsp&nbsp&nbsp <i>or</i> &nbsp&nbsp&nbsp&nbsp&nbsp<strong>a little more money, later</strong></p>'+
     '<br>'+
     '<p>Press the spacebar to continue.</p>',
     choices: [32],
@@ -27,9 +26,9 @@ let welcome = {
   let instr_2 = {
     type:"html-keyboard-response",
     stimulus:'<p>To make your selection on each trial:<br></p>'+
-    '<p><strong>press the <u>1</u> key</strong><br></p>'+
-    '<p>or</p>'+
-    '<p><strong>press the <u>0</u> key</strong><br><br>'+
+    '<br>'+
+    '<p><strong>press the <u>1</u> key</strong>&nbsp&nbsp&nbsp&nbsp&nbsp <i>or</i> &nbsp&nbsp&nbsp&nbsp&nbsp <strong>press the <u>0</u> key</strong><br><br>'+
+    '<br>'+
     '<p>Press either of the response keys to continue.</p>',
     choices: ['1', '0'],
   }
@@ -84,3 +83,6 @@ let welcome = {
     choices: jsPsych.NO_KEYS,
     trial_duration: 10000,
 };
+
+
+

@@ -13,7 +13,7 @@
         <option value="Northwestern">Northwestern</option>
         <option value="Temple">Temple</option>
         <option value="Maryland">Maryland</option>
-        <option value="Maryland">Emory</option>
+        <option value="Emory">Emory</option>
     </select>
     <label for="facility"></label>
 
@@ -85,7 +85,7 @@
 
 <script>$("button.loadMain").click(function(){
 
-    $.getScript("exp/var.js");
+    // $.getScript("exp/var.js");
     $.getScript("exp/timeline.js");
     $.getScript("exp/main.js");
 
