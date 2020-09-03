@@ -7,7 +7,6 @@ $data = $post_data['filedata'];
 file_put_contents($name, $data);
 ?>
 
-
 <!DOCTYPE html>
 <html>
   <head>

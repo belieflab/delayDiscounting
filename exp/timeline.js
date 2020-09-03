@@ -71,7 +71,12 @@ let welcome = {
     choices: ['1', '0'],
     data: jsPsych.timelineVariable('data'),
     on_finish: function(data){
-      data.response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
+      response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
+      if (response == 0) {
+        data.response = 'LDR';
+      } else if (response == 1) {
+        data.response = 'SIR';
+      }
       //data.c1 = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
     }
   }
@@ -79,7 +84,7 @@ let welcome = {
   let end = {
     type: "html-keyboard-response",
     stimulus: "<p>You have completed this task. Please wait for the experimenter to continue.</p>"+
-    "<p>Data Saving...Do not close this window until the text dissapears.</p>",
+    "<p>Data Saving...do not close this window until the text dissapears.</p>",
     choices: jsPsych.NO_KEYS,
     trial_duration: 10000,
 };
