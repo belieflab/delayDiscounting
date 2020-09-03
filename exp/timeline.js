@@ -71,7 +71,7 @@ let welcome = {
     choices: ['1', '0'],
     data: jsPsych.timelineVariable('data'),
     on_finish: function(data){
-      data.experiment = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
+      data.response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
       //data.c1 = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
     }
   }
