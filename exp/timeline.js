@@ -62,7 +62,7 @@ let welcome = {
     stimulus: '<div style="font-size:60px;">+</div>',
     choices: jsPsych.NO_KEYS,
     trial_duration: 1000,
-    data: {test_part: 'fixation'},
+    // data: {test_part: 'fixation'},
   }
   
   let trial = {
@@ -71,6 +71,8 @@ let welcome = {
     choices: ['1', '0'],
     data: jsPsych.timelineVariable('data'),
     on_finish: function(data){
+      data.trial = indexIterator;
+      indexIterator++;
       response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
       if (response == 0) {
         data.response = 'LDR';
@@ -88,6 +90,25 @@ let welcome = {
     choices: jsPsych.NO_KEYS,
     trial_duration: 10000,
 };
+
+/* define procedures trial */
+
+let instructions = {
+  timeline: [welcome, thank_1, instr_1, instr_2, instr_3, instr_4, instr_5]
+};
+
+let procedures = {
+  timeline: [fixation, trial],
+  timeline_variables: main_stimuli,
+  randomize_order: false,
+};
+
+/* main */
+timeline.push(instructions);
+timeline.push(procedures);
+timeline.push(end);
+
+
 
 
 
