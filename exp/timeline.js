@@ -75,9 +75,9 @@ let welcome = {
       indexIterator++;
       response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
       if (response == 0) {
-        data.response = 'LDR';
+        data.response = 'ldr';
       } else if (response == 1) {
-        data.response = 'SIR';
+        data.response = 'sir';
       }
       //data.c1 = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
     }

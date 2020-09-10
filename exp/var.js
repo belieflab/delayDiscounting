@@ -6,6 +6,10 @@ const delay  = [117,61,53,7,19,160,13,14,162,62,7,119,186,21,91,89,157,29,14,179
 
 const rewardSize = ['medium', 'large', 'small', 'large', 'small', 'medium', 'small', 'medium', 'large', 'medium', 'small', 'large', 'small', 'medium', 'large', 'medium', 'large', 'small', 'large', 'small', 'medium', 'small', 'large', 'medium', 'large', 'small', 'medium'];
 
+kIndiff	= [0.00016,	0.006,	0.006,	0.25,	0.041,	0.0004,	0.1,	0.1,	0.00016,	0.006,	0.25,	0.001,	0.00016,	0.041,	0.0025,	0.0025,	0.0004,	0.016,	0.1,	0.0004,	0.016,	0.0025,	0.041,	0.001,	0.016,	0.001,	0.25];
+
+kRank	= [1,	5,	5,	9,	7,	2,	8,	8,	1,	5,	9,	3,	1,	7,	4,4,	2,	6,	8,	2,	6,	4,	7,	3,	6,	3,	9];
+
 let jitter = [900,1000,1100]; //these will divide evenly by screen refreshes on a 60Hz screen
 
 let stim_array = [];
@@ -26,7 +30,7 @@ let stim_array = [];
 
 let main_stimuli = [];
     for (let i =0;i<stim_array.length;i++) {
-        main_stimuli.push({stimulus: stim_array[i], data: {test_part: 'experiment', short_immediate_reward: sir[i], long_delayed_reward: ldr[i], delay: delay[i], reward_size: rewardSize[i]}})
+        main_stimuli.push({stimulus: stim_array[i], data: {test_part: 'experiment', sdr: sir[i], ldr: ldr[i], delay: delay[i], r_size: rewardSize[i], k_indiff: kIndiff[i], k_rank: kRank[i]}})
 }
 
 // start indexing 27 trials for consolidated output
