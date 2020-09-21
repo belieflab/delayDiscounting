@@ -1,0 +1,155 @@
+ElementName,DataType,Size,Required,ElementDescription,ValueRange,Notes,Aliases
+subjectkey,GUID,,Required,The NDAR Global Unique Identifier (GUID) for research subject,NDAR*,,nimhid
+src_subject_id,String,20,Required,Subject ID how it's defined in lab/project,,,"ptid,subject"
+interview_date,Date,,Required,Date on which the interview/genetic test/sampling/imaging/biospecimen was completed. MM/DD/YYYY,,Required field,"sessiondate,studyday"
+interview_age,Integer,,Required,Age in months at the time of the interview/test/sampling/imaging.,0 :: 1260,"Age is rounded to chronological month. If the research participant is 15-days-old at time of interview, the appropriate value would be 0 months. If the participant is 16-days-old, the value would be 1 month.",age
+sex,String,20,Required,Sex of the subject,M;F; O; NR,M = Male; F = Female; O=Other; NR = Not reported,"gender,sex"
+dd_ip1,Float,,Recommended,Delay discounting - Indifference point for 1 day delay,0 :: 10,,
+dd_ip2,Float,,Recommended,Delay discounting - Indifference point for 2 day delay,0 :: 10,,
+dd_ip30,Float,,Recommended,Delay discounting - Indifference point for 30 day delay,0 :: 10,,
+dd_ip180,Float,,Recommended,Delay discounting - Indifference point for 180 day delay,0 :: 10,,
+dd_ip360,Float,,Recommended,Delay discounting - Indifference point for 360 day delay,0 :: 10,,
+dd_1,Integer,,Recommended,"Would you prefer $54 today, or $55 in 117 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_2,Integer,,Recommended,"Would you prefer $55 today, or $75 in 61 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_3,Integer,,Recommended,"Would you prefer $19 today, or $25 in 53 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_4,Integer,,Recommended,"Would you prefer $31 today, or $85 in 7 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_5,Integer,,Recommended,"Would you prefer $14 today, or $25 in 19 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_6,Integer,,Recommended,"Would you prefer $47 today, or $50 in 160 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_7,Integer,,Recommended,"Would you prefer $15 today, or $35 in 13 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_8,Integer,,Recommended,"Would you prefer $25 today, or $60 in 14 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_9,Integer,,Recommended,"Would you prefer $78 today, or $80 in 162 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_10,Integer,,Recommended,"Would you prefer $40 today, or $55 in 62 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_11,Integer,,Recommended,"Would you prefer $11 today, or $30 in 7 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_12,Integer,,Recommended,"Would you prefer $67 today, or $75 in 119 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_13,Integer,,Recommended,"Would you prefer $34 today, or $35 in 186 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_14,Integer,,Recommended,"Would you prefer $27 today, or $50 in 21 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_15,Integer,,Recommended,"Would you prefer $69 today, or $85 in 91 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_16,Integer,,Recommended,"Would you prefer $49 today, or $60 in 89 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_17,Integer,,Recommended,"Would you prefer $80 today, or $85 in 157 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_18,Integer,,Recommended,"Would you prefer $24 today, or $35 in 29 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_19,Integer,,Recommended,"Would you prefer $33 today, or $80 in 14 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_20,Integer,,Recommended,"Would you prefer $28 today, or $30 in 179 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_21,Integer,,Recommended,"Would you prefer $34 today, or $50 in 30 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_22,Integer,,Recommended,"Would you prefer $25 today, or $30 in 80 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_23,Integer,,Recommended,"Would you prefer $41 today, or $75 in 20 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_24,Integer,,Recommended,"Would you prefer $54 today, or $60 in 111 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_25,Integer,,Recommended,"Would you prefer $54 today, or $80 in 30 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_26,Integer,,Recommended,"Would you prefer $22 today, or $25 in 136 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+dd_27,Integer,,Recommended,"Would you prefer $20 today, or $55 in 7 days?",0;1,0=smaller reward today; 1=larger reward in the specified number of days,
+completed,Integer,,Recommended,Checks if completed,0::3,"0=No; 1=Yes; 2=Yes, lost; 3=Unverified",dd_completed
+dd_expressions_nips,Integer,,Recommended,The total number of successfully determined temporal and probabilistic indifference points,0::10,"The procedure determines a total of 10 different indifference points (for five temporal delays, 't1' to 't5', and five probabilistic 'delays', 'p1' to 'p5'). The procedure is stopped as soon as 'expressions.nips' returns 10, i.e. when all indifference points at question have been obtained.",
+dd_t1_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined  for temporal delay t1,0;1,0=No; 1=Yes,
+dd_t1_ip,Float,,Recommended,Indifference point estimate for temporal delay t1,0::10,,
+dd_t2_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for temporal delay t2,0;1,0=No; 1=Yes,
+dd_t2_ip,Float,,Recommended,Indifference point estimate for temporal delay t2,0::10,,
+dd_t3_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for temporal delay t3,0;1,0=No; 1=Yes,
+dd_t3_ip,Float,,Recommended,Indifference point estimate for temporal delay t3,0::10,,
+dd_t4_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for temporal delay t4,0;1,0=No; 1=Yes,
+dd_t4_ip,Float,,Recommended,Indifference point estimate for temporal delay t4,0::10,,
+dd_t5_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for temporal delay t5,0;1,0=No; 1=Yes,
+dd_t5_ip,Float,,Recommended,Indifference point estimate for temporal delay t5,0::10,,
+dd_p1_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for probabilistic delay  p1,0;1,0=No; 1=Yes,
+dd_p1_ip,Float,,Recommended,Indifference point estimate for probabilistic delay  p1,0::10,,
+dd_p2_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for probabilistic delay  p2,0;1,0=No; 1=Yes,
+dd_p2_ip,Float,,Recommended,Indifference point estimate for probabilistic delay  p2,0::10,,
+dd_p3_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for probabilistic delay  p3 ,0;1,0=No; 1=Yes,
+dd_p3_ip,Float,,Recommended,Indifference point estimate for probabilistic delay  p3,0::10,,
+dd_p4_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for probabilistic delay  p4,0;1,0=No; 1=Yes,
+dd_p4_ip,Float,,Recommended,Indifference point estimate for probabilistic delay  p4,0::10,,
+dd_p5_ip_found,Integer,,Recommended,Has an indifference point has been successfully determined for probabilistic delay  p5,0;1,0=No; 1=Yes,
+dd_p5_ip,Float,,Recommended,Indifference point estimate for probabilistic delay  p5,0::10,,
+subject_response,String,10,Recommended,Subject's response,,,"choiceresp,delaydisc_choice_ab"
+rt,Float,,Recommended,Reaction Time,,,"choicert,delaydisc_rt,responsetime"
+delaytrial,Integer,,Recommended,time in milliseconds between end of previous stimulus and beginning of current stimulus.,,,delay
+ddt_small_k,Float,,Recommended,k value for small sums of money ($25 to $35),,,
+ddt_medium_k,Float,,Recommended,k value for medium sums of money ($50 to $60),,,
+ddt_large_k,Float,,Recommended,k value for large sums of money ($75 to $85),,,
+ddt_total_k,Float,,Recommended,"k value for all sums of money ($25 to $85). Taken as the geometric mean of small k, medium k, and large k",,,
+ddt_log_small_k,Float,,Recommended,The natural log of the k value for small sums of money. Done to reduce skewness.,,,
+ddt_log_medium_k,Float,,Recommended,The natural log of the k value for medium sums of money. Done to reduce skewness.,,,
+ddt_log_large_k,Float,,Recommended,The natural log of the k value for large sums of money. Done to reduce skewness.,,,
+ddt_log_total_k,Float,,Recommended,The natural log of the k value for all sums of money. Done to reduce skewness.,,,
+ddt_small_incon,Integer,,Recommended,Inconsistent responding within the small sums of money (3 or more responses are not consistent with the assigned small k value). Inconsistent responding suggests that the assigned k value is not a good fit for the data. Exclude subject from analyses.,,,
+ddt_medium_incon,Integer,,Recommended,Inconsistent responding within the medium sums of money (3 or more responses are not consistent with the assigned medium k value). Inconsistent responding suggests that the assigned k value is not a good fit for the data. Exclude subject from analyses.,,,
+ddt_large_incon,Integer,,Recommended,Inconsistent responding within the large sums of money (3 or more responses are not consistent with the assigned large k value). Inconsistent responding suggests that the assigned k value is not a good fit for the data. Exclude subject from analyses.,,,
+ddt_mn_rt,Float,,Recommended,Mean reaction time for all trials,,,delaydisc_meanrt
+ddt_md_rt,Float,,Recommended,Median reaction time for all trials,,,delaydisc_medianrt
+ddt_sd_rt,Float,,Recommended,Standard deviation of reaction time for all trials,,,delaydisc_sdrt
+ddt_items7_typo,Integer,,Recommended,"This indicates if there was a typo on item 7, in which the delay period is off (should be ""13 days"" but the typo says ""136 days""). The scoring algorithm adjusts for the typo, but this variable may be used to exclude typo data if desired.",,,
+left_choice1,String,20,Recommended,reward option on the left side of the screen for each item,,,
+right_choice2,String,20,Recommended,reward option on the right side of the screen for each item,,,
+delayedchoice,String,20,Recommended,"This variable is supposed to indicate which button selects the delayed choice on a given trial. It is WRONG from item 19 to 27, and thus should NOT be used in calculations.",,,
+r_size,String,20,Recommended,"whether the item is small (1), medium (2), or large (3) in monetary magnitude",,,
+sir,Integer,,Recommended,reward size for the immediate choice,,,
+ldr,Integer,,Recommended,reward size for the delayed choice,,,
+k_indiff,Float,,Recommended,discounting INDIFFERENCE value for each item,,,
+k_rank,Integer,,Recommended,Rank of degree of discounting. Higher rank is higher discounting.,,,
+site,String,101,Recommended,Site,,Study Site,siteid
+timept,Integer,,Recommended,Time Point,,888 = not applicable; 999 = missing,timepoint
+trial,Integer,,Recommended,Trial number,0::400; -777; -999,"1 = first; 2= second; 3=third; 4=fourth; 5=fifth; 6=sixth; etc; -777=NA, -999=missing",delaydisc_trial
+ncaid,Integer,,Recommended,Primary ID of Neurocognitive Test,,,
+delaydisc_type,String,15,Recommended,Time Length For 6-Trials Bundle (or if catch trial),,,
+delaydisc_type_num,Integer,,Recommended,Trial # In Set of Six (0-6),,,
+delaydisc_current_a,Float,,Recommended,Amount of Money Receive Immediately,,,
+delaydisc_current_k,Float,,Recommended,How Deeply Value Decreased w/Time,,,
+version_form,String,121,Recommended,Form used/assessment name,,,"ddisc.experimentname,ddisc_valid,delaydisc_batteryid"
+testid,Integer,,Recommended,Identifier of Current Test,,,delaydisc_testid
+session_id,String,20,Recommended,session ID/screening ID,,,delaydisc_sittingid
+cbgroup,Integer,,Recommended,Counterbalancing Group,,,delaydisc_group
+aurora_device,Integer,,Recommended,Device Used,1 :: 6,1=iPad; 2=iPhone; 3=Tablet; 4=Android Smartphone; 5=Desktop; 6=Laptop,delaydisc_device
+visit,String,50,Recommended,Visit name,,,delaydisc_timepoint
+delaydisc_catch_score,Float,,Recommended,Proportion of Correct Responses Across All Trials,,,
+delaydisc_lnk,Float,,Recommended,Natural Log Of K Parameter Averaged Across Conditions,,,
+delaydisc_twoweeks_lnk,Float,,Recommended,Natural Log Of K Parameter For Two Week Delays,,,
+delaydisc_onemonth_lnk,Float,,Recommended,Natural Log Of K Parameter For One Month Delays,,,
+delaydisc_sixmonths_lnk,Float,,Recommended,Natural Log Of K Parameter For Six Month Delays,,,
+delaydisc_oneyear_lnk,Float,,Recommended,Natural Log Of K Parameter For One Year Delays,,,
+delaydisc_threeyears_lnk,Float,,Recommended,Natural Log Of K Parameter For Three Year Delays,,,
+delaydisc_fiveyears_lnk,Float,,Recommended,Natural Log Of K Parameter For Five Year Delays,,,
+delaydisc_tenyears_lnk,Float,,Recommended,Natural Log Of K Parameter For Ten Year Delays,,,
+deviceserialnumber,String,200,Recommended,device serial number/ID,,,delaydisc_useragent
+testduration,Integer,,Recommended,Seconds Taken To Complete Test,,,delaydisc_duration
+testrestarts,Integer,,Recommended,Number Of Times Participant Restarted Test,,,delaydisc_reloaded
+experiment_name,String,200,Recommended,Experiment Name,,,experimentname
+groups,Integer,,Recommended,Group,0;1,0=Control; 1=Case,group
+stime,String,20,Recommended,Session time,,,sessiontime
+block_number,Integer,,Recommended,Block Number,,,block
+handedness,String,29,Recommended,handedness,R;L;B;999,R = Right; L = Left; B = Both,
+respondent,String,20,Recommended,Respondent,Mother;Father;Both;Other;Parent;Teacher,,
+sv_6mo_200,Float,,Recommended,"Subject for Delay / Indifference Point 6mo, Delay Amount $200",,,"ddisc.sv_6mo_200,ddisc_sv_6mo_200"
+sv_3yr_200,Float,,Recommended,"Subject for Delay / Indifference Point 3yr, Delay Amount $200",,,"ddisc.sv_3yr_200,ddisc_sv_3yr_200"
+sv_1mo_200,Float,,Recommended,"Subject for Delay / Indifference Point 1mo, Delay Amount $200",,,"ddisc.sv_1mo_200,ddisc_sv_1mo_200"
+sv_5yr_200,Float,,Recommended,"Subject for Delay / Indifference Point 5yr, Delay Amount $200",,,"ddisc.sv_5yr_200,ddisc_sv_5yr_200"
+sv_10yr_200,Float,,Recommended,"Subject for Delay / Indifference Point 10yr, Delay Amount $200",,,"ddisc.sv_10yr_200,ddisc_sv_10yr_200"
+sv_1yr_200,Float,,Recommended,"Subject for Delay / Indifference Point 1yr, Delay Amount $200",,,"ddisc.sv_1yr_200,ddisc_sv_1yr_200"
+sv_6mo_40000,Float,,Recommended,"Subject for Delay / Indifference Point 6mo, Delay Amount $40000",,,"ddisc.sv_6mo_40000,ddisc_sv_6mo_40000"
+sv_3yr_40000,Float,,Recommended,"Subject for Delay / Indifference Point 3yr, Delay Amount $40000",,,"ddisc.sv_3yr_40000,ddisc_sv_3yr_40000"
+sv_1mo_40000,Float,,Recommended,"Subject for Delay / Indifference Point 1mo, Delay Amount $40000",,,"ddisc.sv_1mo_40000,ddisc_sv_1mo_40000"
+sv_5yr_40000,Float,,Recommended,"Subject for Delay / Indifference Point 5yr, Delay Amount $40000",,,"ddisc.sv_5yr_40000,ddisc_sv_5yr_40000"
+sv_10yr_40000,Float,,Recommended,"Subject for Delay / Indifference Point 10yr, Delay Amount $40000",,,"ddisc.sv_10yr_40000,ddisc_sv_10yr_40000"
+sv_1yr_40000,Float,,Recommended,"Subject for Delay / Indifference Point 1yr, Delay Amount $40000",,,"ddisc.sv_1yr_40000,ddisc_sv_1yr_40000"
+auc_200,Float,,Recommended,Area Under the Curve for Delay Amount $200,,,"ddisc.auc_200,ddisc_auc_200"
+auc_40000,Float,,Recommended,Area Under the Curve for Delay Amount $40000,,,"ddisc.auc_40000,ddisc_auc_40000"
+mpdat,Float,,Recommended,days from enrollment,,,studyday
+cogbias_state,String,25,Recommended,Event Received at Response Termination,,,delaydisc_state
+ddisc_sv_1wk_100,Float,,Recommended,"Subjective Value / Indifference Point, Amount $100 in 1 week Delay",,,ddisc.sv_1wk_100
+ddisc_sv_2wk_100,Float,,Recommended,"Subjective Value / Indifference Point, Amount $100 in 2 week Delay",,,ddisc.sv_2wk_100
+ddisc_sv_1mo_100,Float,,Recommended,"Subjective Value / Indifference Point, Amount $100 in 1 month Delay",,,ddisc.sv_1mo_100
+ddisc_sv_6mo_100,Float,,Recommended,"Subjective Value / Indifference Point, Amount $100 in 6 month Delay",,,ddisc.sv_6mo_100
+ddisc_sv_1yr_100,Float,,Recommended,"Subjective Value / Indifference Point, Amount $100 in 1 year Delay",,,ddisc.sv_1yr_100
+ddisc_sv_3yr_100,Float,,Recommended,"Subjective Value / Indifference Point, Amount $100 in 3 year Delay",,,ddisc.sv_3yr_100
+ddisc_auc_20,Float,,Recommended,Area Under the Curve for Delay Amount $20,,,ddisc.auc_20
+ddisc_auc_100,Float,,Recommended,Area Under the Curve for Delay Amount $100,,,ddisc.auc_100
+ddisc_comparemoney,Float,,Recommended,Mean accuracy for comparison between two monetary values,,,ddisc.comparemoney
+ddisc_comparemoneydelay,Float,,Recommended,Mean accuracy for comparison between one monetary value at two different delays,,,ddisc.comparemoneydelay
+ddisc_comparedelay,Float,,Recommended,Mean accuracy for comparison between two temporal delays,,,ddisc.comparedelay
+ddisc_valid,Integer,,Recommended,Current Programming Version of the Scoring Code,,,
+ddisc_sv_1wk_20,Float,,Recommended,"Subjective Value / Indifference Point, Amount $20 in 1 week Delay",,,ddisc.sv_1wk_20
+ddisc_sv_2wk_20,Float,,Recommended,"Subjective Value / Indifference Point, Amount $20 in 2 week Delay",,,ddisc.sv_2wk_20
+ddisc_sv_1mo_20,Float,,Recommended,"Subjective Value / Indifference Point, Amount $20 in 1 month Delay",,,ddisc.sv_1mo_20
+ddisc_sv_6mo_20,Float,,Recommended,"Subjective Value / Indifference Point, Amount $20 in 6 month Delay",,,ddisc.sv_6mo_20
+ddisc_sv_1yr_20,Float,,Recommended,"Subjective Value / Indifference Point, Amount $20 in 1 year Delay",,,ddisc.sv_1yr_20
+ddisc_sv_3yr_20,Float,,Recommended,"Subjective Value / Indifference Point, Amount $20 in 3 year Delay",,,ddisc.sv_3yr_20
+key_press,Integer,,Recommended,Keycode value of the key pressed,,,
+stimulus,String,,Recommended,Stimulus presented to the participant,,,
+delay,Integer,,Recommended,Length in days needed to wait to get the LDR,,,

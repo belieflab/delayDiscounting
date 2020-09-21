@@ -1,0 +1,5 @@
+deldisk,1,,,,,,,,,,,,,,,
+subjectkey,src_subject_id,sessiondate,age,sex,rt,stimulus,key_press,timept,sir,ldr,delay,r_size,k_indiff,k_rank,trial,subject_response
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+bold indicates variables that currently have a different name that needs to be changed to match data dictionary,,,,,,,,,,,,,,,,
