@@ -71,6 +71,12 @@ let welcome = {
     choices: ['1', '0'],
     data: jsPsych.timelineVariable('data'),
     on_finish: function(data){
+      data.subjectkey = 'GUID';
+      data.src_subject_id = workerId;
+      data.site = siteNumber;
+      data.interview_date = today;
+      data.interview_age = ageAtAssessment;
+      data.sex = sexAtBirth;
       data.trial = indexIterator;
       indexIterator++;
       response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
@@ -91,22 +97,6 @@ let welcome = {
     trial_duration: 10000,
 };
 
-/* define procedures trial */
-
-let instructions = {
-  timeline: [welcome, thank_1, instr_1, instr_2, instr_3, instr_4, instr_5]
-};
-
-let procedures = {
-  timeline: [fixation, trial],
-  timeline_variables: main_stimuli,
-  randomize_order: false,
-};
-
-/* main */
-timeline.push(instructions);
-timeline.push(procedures);
-timeline.push(end);
 
 
 
