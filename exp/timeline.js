@@ -93,8 +93,8 @@ let welcome = {
     type: "html-keyboard-response",
     stimulus: "<p>You have completed this task. Please wait for the experimenter to continue.</p>"+
     "<p>Data Saving...do not close this window until the text dissapears.</p>"+
-    "<p>To leave feedback, please click the followihg link:</p>"+
-    "<a style='color: black' href='https://omnibus.sh/eCRFs/feedback/dd.php'></a>",
+    "<p>To leave feedback, please click the following link:</p>"+
+    "<p><a href='https://omnibus.sh/eCRFs/feedback/dd.php'>Leave Task Feedback!</a></p>",
     choices: jsPsych.NO_KEYS,
     trial_duration: 10000,
 };
