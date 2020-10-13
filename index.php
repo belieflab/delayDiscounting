@@ -25,5 +25,6 @@ file_put_contents($name, $data);
     <script type="text/javascript" src="//code.jquery.com/jquery-git.js"></script>
     <script src="exp/fn.js"></script>
     <script src="exp/var.js"></script>
+    <script src="exp/timeline.js"></script>
   </footer>
 </html>
