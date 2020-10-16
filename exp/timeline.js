@@ -96,6 +96,7 @@ let save_data = {
   trial_duration: 5000,
   on_finish: function(){
     saveData("delay-discounting_" + workerId, jsPsych.data.get().csv());
+    document.getElementById("unload").onbeforeunload='';
   }
 };
 
