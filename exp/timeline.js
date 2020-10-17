@@ -97,6 +97,9 @@ let save_data = {
   on_finish: function(){
     saveData("delay-discounting_" + workerId, jsPsych.data.get().csv());
     document.getElementById("unload").onbeforeunload='';
+    $(document).ready(function(){
+    $("body").addClass("showCursor"); // returns cursor functionality
+});
   }
 };
 
