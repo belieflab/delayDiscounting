@@ -46,8 +46,7 @@
   </form>
 <form>
 
-<form>
-    <!-- <label for="handedness"><b>Are you right or left handed?</b></label> -->
+<!-- <form>
     <p><b>Which is your dominant hand?</b></p>
         <label for="right">Right</label>
         <input id="rightHanded" type="radio" value="rightHanded">
@@ -55,8 +54,7 @@
         <label for="left">Left</label>
         <input id="leftHanded" type="radio" value="leftHanded">
 
-        <!-- <span class="checkmark"></span> -->
-  </form>
+  </form> -->
     <p><b>Before proceeding to the task, please confirm that the following are true:</b></p>
     <label class="container">Screen brightness is up to 100% &nbsp&nbsp&nbsp&nbsp   
     <input type="checkbox">
