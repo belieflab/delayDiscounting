@@ -80,16 +80,18 @@
 </form>
 </div>
 <div>
-<button id="nextButton" style="display: none" onclick="startExperiment()">START</button>
+<button id="nextButton" class="noCursor" style="display: none" onclick="startExperiment()">START</button>
 <!-- <p id="nextButton" style="display: none" >please make sure you are in a quiet place. When you are ready to begin, click 'START'</p> -->
 <br>
 </div>
 <script type="text/javascript" src="//code.jquery.com/jquery-git.js"></script>
 <script>$("button.loadMain").click(function(){
     $.getScript("exp/main.js");
-    $("body").addClass("hideCursor");
   }); </script>
 <script>
+$("button.noCursor").click(function(){
+$("body").addClass("hideCursor");
+}); 
 </script>
 <!-- <label class="container">One
   <input type="checkbox" checked="checked">
