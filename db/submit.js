@@ -52,16 +52,16 @@ function submitIntake() {
 
     let subjectID = document.getElementById("subjectid").value;
     let siteID = document.getElementById("siteid");
-    // let rightHandedness = document.getElementById("rightHanded").checked;
-    // let leftHandedness = document.getElementById("leftHanded").checked;
+    let rightHandedness = document.getElementById("rightHanded").checked;
+    let leftHandedness = document.getElementById("leftHanded").checked;
     
-    // if(rightHandedness === true) {
-    //     handedness = "right";
-    //     antihandedness = "left";
-    // } else if(leftHandedness === true) {
-    //     handedness = "left";
-    //     antihandedness = "right";
-    // } 
+    if(rightHandedness === true) {
+        handedness = "right";
+        antihandedness = "left";
+    } else if(leftHandedness === true) {
+        handedness = "left";
+        antihandedness = "right";
+    } 
     const zeroPad = (num, places) => String(num).padStart(places, '0');
     switch(siteID.options[siteID.selectedIndex].value){
         case "Maryland":
