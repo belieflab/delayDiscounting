@@ -30,7 +30,7 @@ let stim_array = [];
 
 let main_stimuli = [];
     for (let i =0;i<stim_array.length;i++) {
-        main_stimuli.push({stimulus: stim_array[i], data: {test_part: 'experiment', sdr: sir[i], ldr: ldr[i], delay: delay[i], r_size: rewardSize[i], k_indiff: kIndiff[i], k_rank: kRank[i]}})
+        main_stimuli.push({stimulus: stim_array[i], data: {test_part: 'experiment', sir: sir[i], ldr: ldr[i], delay: delay[i], r_size: rewardSize[i], k_indiff: kIndiff[i], k_rank: kRank[i]}})
 }
 
 // start indexing 27 trials for consolidated output
