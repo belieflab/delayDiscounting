@@ -19,15 +19,15 @@ function validateIntake() {
 
 function submitIntake() {
     let subjectID = document.getElementById("subjectid").value;
-    // let rightHandedness = document.getElementById("rightHanded").checked;
-    // let leftHandedness = document.getElementById("leftHanded").checked;
+    let rightHandedness = document.getElementById("rightHanded").checked;
+    let leftHandedness = document.getElementById("leftHanded").checked;
     let siteID = document.getElementById("siteid");
    
-    // if(rightHandedness == true) {
-    //     handedness = "right";
-    // } else if(leftHandedness == true) {
-    //     handedness = "left"
-    // } 
+    if(rightHandedness == true) {
+        handedness = "right";
+    } else if(leftHandedness == true) {
+        handedness = "left"
+    } 
 
     switch(siteID.options[siteID.selectedIndex].value){
         case "Yale":
