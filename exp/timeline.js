@@ -112,7 +112,7 @@ let end = {
   "<p>To leave feedback on this task, please click the following link:</p>"+
   "<p style='color:white;'><a href="+feedbackLink+">Leave Task Feedback!</a></p>"+
   // "<p>Please wait for the experimenter to continue.</p>"+
-  "<p>You may now close the expriment window at anytime.</p>",
+  "<p><i>You may now close the expriment window at anytime.</i></p>",
   choices: jsPsych.NO_KEYS,
   // trial_duration: 60000,
 };
