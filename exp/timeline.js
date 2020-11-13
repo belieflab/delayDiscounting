@@ -4,14 +4,14 @@ let timeline = [];
 let welcome = {
     type: "html-keyboard-response",
     stimulus: '<h3 style="color:blue;">Welcome to the experiment!</h3>'+
-    '<p>Press any key to begin.</p>',
+    '<p><i>Press any key to begin.</i></p>',
 }
 
 let instr_1 = {
   type:"html-keyboard-response",
   stimulus:'<p>In the following task, you will be asked to pretend to choose between earning either:</p>'+
   '<p><strong>a little money now</strong>&nbsp&nbsp&nbsp&nbsp&nbsp <i>or</i> &nbsp&nbsp&nbsp&nbsp&nbsp<strong>a little more money, later</strong></p>'+
-  '<p>Press the spacebar to continue.</p>',
+  '<p><i>Press the spacebar to continue.</i></p>',
   choices: [32],
 }
 
@@ -19,7 +19,7 @@ let instr_2 = {
   type:"html-keyboard-response",
   stimulus:'<p>To make your selection on each trial:<br></p>'+
   '<p><strong>press the <u>1</u> key</strong>&nbsp&nbsp&nbsp&nbsp&nbsp <i>or</i> &nbsp&nbsp&nbsp&nbsp&nbsp <strong>press the <u>0</u> key</strong><br>'+
-  '<p>Press either of the response keys to continue.</p>',
+  '<p><i>Press either of the response keys to continue.</i></p>',
   choices: ['1', '0'],
 }
 
@@ -27,7 +27,7 @@ let instr_3 = {
   type:"html-keyboard-response",
   stimulus:'<p>There are no right or wrong answers.<br></p>'+
   '<p> Please take your time, and respond as truthfully as you can.</p>'+
-  '<p>Press the spacebar to continue.</p>',
+  '<p><i>Press the spacebar to continue.</i></p>',
   choices: [32],
 }
 
