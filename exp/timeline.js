@@ -96,7 +96,7 @@ let save_data = {
   choices: jsPsych.NO_KEYS,
   trial_duration: 5000,
   on_finish: function(){
-    saveData("delay-discounting_" + workerId, jsPsych.data.get().csv());
+    saveData("dd_" + workerId, jsPsych.data.get().csv());
     document.getElementById("unload").onbeforeunload='';
     $(document).ready(function(){
     $("body").addClass("showCursor"); // returns cursor functionality
