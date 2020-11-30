@@ -10,6 +10,8 @@ let ageAtAssessment;
 
 let sexAtBirth;
 
+let GUID;
+
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -27,6 +29,15 @@ function ageFinder(){
         ageAtAssessment = parseInt(ageInMonths);
     } else {
         alert("Please enter your date of birth.");
+    }
+
+}
+
+function guidBuilder(){
+    if (document.getElementById("guid").value !== '') {
+        GUID = guid.value;
+    } else {
+        alert("Please generate GUID before proceeding.");
     }
 
 }

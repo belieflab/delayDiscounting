@@ -60,7 +60,7 @@ let trial = {
   choices: ['1', '0'],
   data: jsPsych.timelineVariable('data'),
   on_finish: function(data){
-    data.subjectkey = 'GUID';
+    data.subjectkey = GUID;
     data.src_subject_id = workerId;
     data.site = siteNumber;
     data.interview_date = today;
