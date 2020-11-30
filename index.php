@@ -15,6 +15,7 @@ $prepare->execute();
 $result = $prepare->get_result();
 $row = $result->fetch_assoc();
 $guid = $row["GUID"];
+$guidId = $_POST["guid"];
 $prepare->close();
 ?>
 

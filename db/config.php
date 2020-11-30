@@ -27,7 +27,7 @@ ini_set( 'display_errors', 1 ); // RPH: set this to 0 in Production once
 /* -- Set Up Database Interaction, CONNECT, reCONNECT, Errors, etc. ---- */
 // Database Connection Parameters
 DEFINE( 'DB_HOST',     "24.218.193.14" );
-DEFINE( 'DB_USER',     "root" );
+DEFINE( 'DB_USER',     "jason" );
 DEFINE( 'DB_PASSWORD', "dingdong" ); // Note: this should be your root password
 DEFINE( 'DB_NAME',     "omnibus" );
 DEFINE( 'SALT',        "graduate" );
