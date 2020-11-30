@@ -1,7 +1,3 @@
-<?php
-$guidId = $_POST["guid"];
-?>
-
 <div class="screening" style="background-color:lightgray; text-align:center; margin:35px; vertical-align:middle">
 <br>
 <h1 style="text-align:center;">CAPR Participant Intake</h1>
@@ -29,7 +25,7 @@ $guidId = $_POST["guid"];
     <form action="<?php echo SIGNUP_VIEW ?>/post/intakeadd.php" method="post">
     <p><b>Subject ID Number:</b></p>
     <input required id="subjectid" type="text" name="consent_id" plattern="\d*" minlength="4" maxlength="4">
-
+    
     <!-- GUID -->
     <input type="hidden" id="guid" name="guid" value="<?php echo $guid ?>">
 
