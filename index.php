@@ -5,6 +5,7 @@ $name = "data/".$post_data['filename'].".csv";
 $data = $post_data['filedata'];
 // write the file to disk
 file_put_contents($name, $data);
+
 include_once ("db/config.php");
 
 $studyId = $_GET["studyId"];
@@ -15,7 +16,6 @@ $prepare->execute();
 $result = $prepare->get_result();
 $row = $result->fetch_assoc();
 $guid = $row["GUID"];
-// $guidId = $_POST["guid"];
 $prepare->close();
 ?>
 
