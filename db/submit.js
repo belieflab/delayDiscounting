@@ -37,7 +37,7 @@ function guidBuilder(){
     if (document.getElementById("guid").value !== '') {
         GUID = guid.value;
     } else {
-        alert("ERROR: No GUID record in database! Assessor: Please generate GUID and refresh before proceeding.");
+        alert("ERROR: No GUID record in database! \nAssessor: Please generate GUID and refresh this page before proceeding.");
     }
 
 }

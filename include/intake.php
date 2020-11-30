@@ -27,7 +27,7 @@
     <input required id="subjectid" type="text" name="consent_id" plattern="\d*" minlength="4" maxlength="4">
     
     <!-- GUID -->
-    <input type="hidden" id="guid" name="guid" value="<?php echo $guid ?>">
+    <input required type="hidden" id="guid" name="guid" value="<?php echo $guid ?>">
 
     </form>
     <!-- <button onclick="submitIntake()">submit subjectid</button> -->
