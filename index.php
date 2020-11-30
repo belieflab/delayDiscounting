@@ -11,17 +11,10 @@ $studyId = $_GET["studyId"];
 $candidateId = $_GET["candidateId"];
 $query = "SELECT GUID from candidate where sub_id = $candidateId";
 $prepare = $db_connection->prepare($query);
-// $prepare->bind_param('i', $candidateId);
 $prepare->execute();
 $result = $prepare->get_result();
 $row = $result->fetch_assoc();
-// echo"<br>";
-// echo"<br>";
-// echo"<br>";
-// echo"<br>";
-// echo$query;
 $guid = $row["GUID"];
-// echo$guid;
 $prepare->close();
 ?>
 
