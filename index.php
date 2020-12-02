@@ -39,7 +39,7 @@ $prepare->close();
     <script src="exp/var.js"></script>
     <!-- <script src="exp/timeline.js"></script> -->
     <script type="text/javascript">
-    let feedbackLink = "https://omnibus.sh/eCRFs/feedback/tasks/dd.php?studyId=<?php echo $studyId?>";
+    let feedbackLink = "https://omnibus.sh/eCRFs/feedback/tasks/dd.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";
     </script>
   </footer>
 </html>
