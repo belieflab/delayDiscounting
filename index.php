@@ -20,7 +20,6 @@ if (isset($candidateId)) {
   $prepare->close();
   } else {
 }
-
 ?>
 
 <!DOCTYPE html>
