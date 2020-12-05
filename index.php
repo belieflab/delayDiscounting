@@ -18,7 +18,7 @@ if (isset($candidateId)) {
   $row = $result->fetch_assoc();
   $guid = $row["GUID"];
   $prepare->close();
-} else {
+  } else {
 }
 
 ?>
