@@ -10,17 +10,16 @@ include_once ("db/config.php");
 
 $studyId = $_GET["studyId"];
 $candidateId = $_GET["candidateId"];
-// if (isset($candidateId)) {
-  // $query = "SELECT GUID from candidate where sub_id = $candidateId";
-  // $prepare = $db_connection->prepare($query);
-  // $prepare->execute();
-  // $result = $prepare->get_result();
-  // $row = $result->fetch_assoc();
-  // $guid = $row["GUID"];
-  // $prepare->close();
-//   } else {
-//     echo "hi";
-// }
+if (isset($candidateId)) {
+  $query = "SELECT GUID from phi where sub_id = $candidateId";
+  $prepare = $db_connection->prepare($query);
+  $prepare->execute();
+  $result = $prepare->get_result();
+  $row = $result->fetch_assoc();
+  $guid = $row["GUID"];
+  $prepare->close();
+  } else {
+}
 ?>
 
 <!DOCTYPE html>
