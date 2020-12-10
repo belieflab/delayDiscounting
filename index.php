@@ -10,7 +10,7 @@ include_once ("db/config.php");
 
 $studyId = $_GET["studyId"];
 $candidateId = $_GET["candidateId"];
-if (isset($candidateId)) {
+if (isset($studyId)) {
   $query = "SELECT GUID from candidate where sub_id = $candidateId";
   $prepare = $db_connection->prepare($query);
   $prepare->execute();
