@@ -19,6 +19,7 @@ if (isset($candidateId)) {
   $guid = $row["GUID"];
   $prepare->close();
   } else {
+    echo "hi";
 }
 ?>
 
