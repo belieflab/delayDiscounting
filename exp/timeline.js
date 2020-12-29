@@ -67,7 +67,7 @@ let trial = {
     data.interview_age = ageAtAssessment;
     data.sex = sexAtBirth;
     data.handedness = handedness;
-    data.trial = indexIterator;
+    data.index = indexIterator;
     indexIterator++;
     response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
     if (response == 0) {
