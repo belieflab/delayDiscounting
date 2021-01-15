@@ -3,7 +3,7 @@ let timeline = [];
 
 let welcome = {
     type: "html-keyboard-response",
-    stimulus: '<h3 style="color:blue;">Welcome to the experiment!</h3>'+
+    stimulus: '<h3 style="color:orange;">Welcome to the experiment!</h3>'+
     '<p><i>Press any key to begin.</i></p>',
 }
 

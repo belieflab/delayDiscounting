@@ -40,17 +40,7 @@ $ageInMonths = $_GET["interview_age"];
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body id='unload' onbeforeunload="return areYouSure()" style="background-color: white;">  
-    <?php
-      if ($db_connection_status == true) {
-        include_once "include/nda.php";
-        // echo'<br>';
-        // echo'connected';
-      } else if ($db_connection_status == false) {
-        include_once "include/intake.php";
-        // echo'<br>';
-        // echo'not connected';
-      }
-    ?>
+   
   </body>
   <footer>
     <script src="exp/fn.js"></script>
