@@ -2,9 +2,9 @@
 let timeline = [];
 
 let welcome = {
-    type: "html-keyboard-response",
-    stimulus: '<h3 style="color:blue;">Welcome to the experiment!</h3>'+
-    '<p><i>Press any key to begin.</i></p>'
+  type: "html-keyboard-response",
+  stimulus: '<h3 style="color:blue;">Welcome to the experiment!</h3>'+
+  '<p><i>Press any key to begin.</i></p>'
 };
 
 let instr_1 = {
@@ -58,7 +58,7 @@ let trial = {
   stimulus: jsPsych.timelineVariable('stimulus'), //train_stimuli_array, //jsPsych.timelineVariable('stimulus'),
   choices: ['1', '0'],
   data: jsPsych.timelineVariable('data'),
-  on_finish: function(data){
+  on_finish: function(data) {
     'use strict';
     data.subjectkey = GUID;
     data.src_subject_id = workerId;
@@ -69,7 +69,7 @@ let trial = {
     data.handedness = handedness;
     data.index = indexIterator;
     indexIterator++;
-    response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press)
+    let response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press);
     if (response == 0) {
       data.response = 'ldr';
     } else if (response == 1) {
