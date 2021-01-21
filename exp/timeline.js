@@ -1,5 +1,11 @@
+// create an array called timeline 
+// = is assign 
+// empty arrays are indicated with square brackets 
 let timeline=[];
 
+// create an object 
+// objects are denoted with {}
+// type, stimulus, choice are properties 
 let welcome={
   type: "html-keyboard-response",
   stimulus: "<p> hello world </p>",
@@ -12,6 +18,7 @@ let image={
   choices: [32]
 };
 
+// use of multiple images using html keyboard response 
 // let images={
 //   type:"html-keyboard-response",
 //   stimulus: function() {

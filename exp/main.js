@@ -1,5 +1,8 @@
+
+// main order in which things are pushed to timeline 
 let procedures= {
     timeline:[timelineVariable], 
+    // defines which array to draw stimuli from 
     timeline_variables: expStim
 };
 
