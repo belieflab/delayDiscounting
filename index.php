@@ -56,7 +56,7 @@
         siteNumber = "<?php echo $institutionAlias?>";
         ageAtAssessment = "<?php echo $ageInMonths?>";
         groupStatus = "<?php echo $groupStatus?>";
-        feedbackLink = "https://belieflab.yale.edu/omnibus/eCRFs/feedback/tasks/kamin.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";
+        feedbackLink = "https://belieflab.yale.edu/omnibus/eCRFs/feedback/tasks/dd.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";
       }
     </script>
   </footer>
