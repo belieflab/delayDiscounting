@@ -11,8 +11,17 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"] . '/config.php')) {
   $sexAtBirth = $_GET["sex"];
   $institutionAlias = $_GET["site"];
   $ageInMonths = $_GET["interview_age"];
-  // $groupStatus = openssl_decrypt($_GET["phenotype"],$encryptionMethod, $secretHash);
-  $groupStatus = $_POST["phenotype"];
+  $groupStatus = openssl_decrypt($_GET["phenotype"],$encryptionMethod, $secretHash);
+  // $groupStatus = $_POST["phenotype"];
+  echo"<br>";
+  echo"<br>";
+  echo"<br>";
+  echo"<br>";
+  echo"<br>";
+  echo"<br>";
+  echo"<br>";
+  echo"<br>";
+  echo$groupStatus;
 
   } else {
     $db_connection_status = null;
