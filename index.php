@@ -31,9 +31,8 @@
     ?>
   </body>
   <footer>
-  <script type="text/javascript" src="exp/conf.js"></script>
-  <script defer type="text/javascript" src="exp/var.js"></script>
   <script type="text/javascript" src="exp/fn.js"></script>
+  <script type="text/javascript" src="exp/var.js"></script>
 
     <script type="text/javascript">
       // declare NDA required variables
@@ -53,8 +52,8 @@
         siteNumber = "<?php echo $institutionAlias?>";
         ageAtAssessment = "<?php echo $ageInMonths?>";
         groupStatus = "<?php echo $groupStatus?>";
-        visit = "<?php echo $visit?>";
-feedbackLink = "https://belieflab.yale.edu/omnibus/eCRFs/feedback/tasks/kamin.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";    
+	visit = "<?php echo $visit?>";
+        feedbackLink = "https://belieflab.yale.edu/omnibus/eCRFs/feedback/tasks/dd.php?candidateId=<?php echo $candidateId?>&studyId=<?php echo $studyId?>";
 </script>
   </footer>
 </html>
