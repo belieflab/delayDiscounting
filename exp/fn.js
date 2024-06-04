@@ -31,4 +31,4 @@ function startExperiment(){
     function areYouSure() {
       return "Write something clever here...";
     }
-    areYouSure();
+    areYouSure();// add local functions here
