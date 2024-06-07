@@ -86,17 +86,15 @@ require_once './wrap/lib/ids.php';
     <link rel="stylesheet" type="text/css" href="./css/exp.css">
 </head>
 <body id='unload' onbeforeunload="return areYouSure()">
-    <?php
-    if (null !== $_GET["workerId"] || null !== $_GET["PROLIFIC_PID"] || null !== $_GET["participantId"]) {
-    include_once "./wrap/include/consent.php";
+<?php
+    if (isset($_GET["workerId"]) || isset($_GET["PROLIFIC_PID"]) || isset($_GET["participantId"])) {
+      include_once "./wrap/include/consent.php";
+    } else if (isset($_GET["src_subject_id"])) {
+      include_once "./wrap/include/nda.php";
+    } else {
+      include_once "./wrap/include/intake.php";
     }
-    if (null !== $_GET["src_subject_id"]) {
-    include_once "./wrap/include/nda.php";
-    } 
-    if (null === $_GET["workerId"] && null === $_GET["PROLIFIC_PID"] && null === $_GET["participantId"] && null === $_GET["src_subject_id"]) {
-    include_once "./wrap/include/intake.php";
-    }
-    ?>
+  ?>
 </body>
 <footer>
     <!-- load config first! -->
