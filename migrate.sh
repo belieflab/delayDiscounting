@@ -112,7 +112,7 @@ EOL
 
 echo "PHP file has been updated successfully."
 
-# Overwrite the ./exp/fn.js file with only the countdown function:
+# Overwrite the ./exp/fn.js file with only the countdown function: - remove all of the named functions from exp/fn.js that also live in wrap/lib/fn.js
 cat <<EOL > ./exp/fn.js
 function countdown(){ // initialize timer
     var sec = 5; // set timer in seconds
@@ -161,7 +161,7 @@ echo "Removed the ./db folder from the project"
 rm -f ./css/style.css
 echo "Removed the style.css file from the ./css folder"
 
-# Replace let trial in exp/timeline.js with new block adding writeCandidateKeys(data) to it:
+# Replace let trial in exp/timeline.js with new block adding writeCandidateKeys(data) to it: 
 awk '
 /let trial = {/ {
     print $0
@@ -197,6 +197,4 @@ awk '
 echo "jsPsych $version PHP wrapper has been installed successfully!"
 
 echo "$START_EXPERIMENT_CODE" | cat - "$TIMELINE_FILE" > temp && mv temp "$TIMELINE_FILE"
-echo "startExperiment function prepended to "$TIMELINE_FILE" 
-
-
+echo "startExperiment function prepended to "$TIMELINE_FILE""

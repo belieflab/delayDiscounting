@@ -1,3 +1,30 @@
+startExperiment = () => {
+    jsPsych.init({
+        timeline: timeline,
+        show_progress_bar: true,
+        preload_images: [],
+        preload_audio: [],
+        preload_video: [],
+    });
+};
+startExperiment = () => {
+    jsPsych.init({
+        timeline: timeline,
+        show_progress_bar: true,
+        preload_images: [],
+        preload_audio: [],
+        preload_video: [],
+    });
+};
+startExperiment = () => {
+    jsPsych.init({
+        timeline: timeline,
+        show_progress_bar: true,
+        preload_images: [],
+        preload_audio: [],
+        preload_video: [],
+    });
+};
 /* create timeline */
 let timeline = [];
 
@@ -59,16 +86,7 @@ let trial = {
   choices: ['1', '0'],
   data: jsPsych.timelineVariable('data'),
   on_finish: function(data) {
-    'use strict';
-    data.subjectkey = GUID;
-    data.src_subject_id = workerId;
-    data.site = siteNumber;
-    data.interview_date = today;
-    data.interview_age = ageAtAssessment;
-    data.sex = sexAtBirth;
-    data.phenotype = groupStatus;
-    data.handedness = handedness;
-    data.index = indexIterator;
+    writeCandidateKeys(data);
     indexIterator++;
     let response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press);
     if (response == 0) {
