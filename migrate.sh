@@ -195,6 +195,6 @@ awk '
 echo "jsPsych $version PHP wrapper has been installed successfully!"
 
 echo "$START_EXPERIMENT_CODE" | cat - "$TIMELINE_FILE" > temp && mv temp "$TIMELINE_FILE"
-echo "startExperiment function prepended to "$TIMELINE_FILE" 
+echo "startExperiment function prepended to "$TIMELINE_FILE""
 
 
