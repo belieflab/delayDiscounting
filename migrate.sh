@@ -192,8 +192,8 @@ awk '
 }
 ' ./exp/timeline.js > tmp && mv tmp ./exp/timeline.js
 
-# TODO: Replace let save_data in ./exp/timeline.js with const dataSave from ./wrap/tmp/v6/: 
- 
+# Replace let save_data in ./exp/timeline.js with const dataSave from ./wrap/tmp/v6/: 
+
 echo "jsPsych $version PHP wrapper has been installed successfully!"
 
 echo "$START_EXPERIMENT_CODE" | cat - "$TIMELINE_FILE" > temp && mv temp "$TIMELINE_FILE"
