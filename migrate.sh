@@ -65,7 +65,7 @@ require_once './wrap/lib/ids.php';
     <!-- add the title of the experiment that would be seen in the browser -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-        document.title = `${experimentAlias.toUpperCase()}`;
+        document.title = `\${experimentAlias.toUpperCase()}`;
         });
     </script>
     <!-- favicon -->
