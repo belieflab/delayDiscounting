@@ -36,14 +36,25 @@ function openFullscreen() {
   
   /* Close fullscreen */
   function closeFullscreen() {
-      if (document.exitFullscreen) { /* Chrome, Firefox */
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) { /* Safari */
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) { /* IE11 */
-        document.msExitFullscreen();
-      }
+    // Check if the document is currently in fullscreen mode
+    if (document.fullscreenElement) {
+        if (document.exitFullscreen) {
+            // Standard method
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            // Safari
+            document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            // Firefox
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            // IE11
+            document.msExitFullscreen();
+        }
+    } else {
+        console.warn("Document is not in fullscreen mode.");
     }
+};
 
 // detect userAGENT
 
