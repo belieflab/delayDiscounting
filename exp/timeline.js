@@ -1,3 +1,12 @@
+startExperiment = () => {
+    jsPsych.init({
+        timeline: timeline,
+        show_progress_bar: true,
+        preload_images: [],
+        preload_audio: [],
+        preload_video: [],
+    });
+};
 /* create timeline */
 let timeline = [];
 
@@ -41,7 +50,7 @@ let instr_5 = {
   type:"html-keyboard-response",
   stimulus:'<p style="color:black; font-size:60px;" id="countdown"></p>',
   trial_duration: 5200,
-  on_start: countdown(),
+  on_start: countdown,
   response_ends_trial: false
   };
 
@@ -59,16 +68,7 @@ let trial = {
   choices: ['1', '0'],
   data: jsPsych.timelineVariable('data'),
   on_finish: function(data) {
-    'use strict';
-    data.subjectkey = GUID;
-    data.src_subject_id = workerId;
-    data.site = siteNumber;
-    data.interview_date = today;
-    data.interview_age = ageAtAssessment;
-    data.sex = sexAtBirth;
-    data.phenotype = groupStatus;
-    data.handedness = handedness;
-    data.index = indexIterator;
+    writeCandidateKeys(data);
     indexIterator++;
     let response = jsPsych.pluginAPI.convertKeyCodeToKeyCharacter(data.key_press);
     if (response == 0) {
@@ -108,12 +108,14 @@ let save_data = {
   }
 };
 
+let feedbackLink= "https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_bErtyAFIwnwDhWu"
+
 let end = {
   type: "html-keyboard-response",
   stimulus:   "<p>Thank you!</p>"+
   "<p>You have successfully completed the experiment and your data has been saved.</p>"+
-  "<p>To leave feedback on this task, please click the following link:</p>"+
-  "<p style='color:white;'><a href="+feedbackLink+">Leave Task Feedback!</a></p>"+
+  // "<p>To leave feedback on this task, please click the following link:</p>"+
+  // "<p style='font-color:black;'><a href="+feedbackLink+">Leave Task Feedback!</a></p>"+
   // "<p>Please wait for the experimenter to continue.</p>"+
   "<p><i>You may now close the expriment window at anytime.</i></p>",
   choices: jsPsych.NO_KEYS,

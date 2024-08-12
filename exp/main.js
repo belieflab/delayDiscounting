@@ -15,3 +15,8 @@ timeline.push(instructions);
 timeline.push(procedures);
 timeline.push(save_data);
 timeline.push(end);
+// don't allow experiment to start unless subjectId is set
+if (subjectId) {
+    // Old jsPsych 6.3 syntax
+    startExperiment();
+}
