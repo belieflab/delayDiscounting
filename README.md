@@ -1,4 +1,8 @@
 # Delay Discounting (DD)
+
+```
+git clone --recurse-submodules -j4 git@github.com:belieflab/delayDiscounting.git && cd delayDiscounting && git submodule foreach --recursive 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo main)' && git update-index --assume-unchanged exp/conf.js
+```
 _Refactored by Sayli and Josh for CAPR multisite study_
 
 ## Overview 
