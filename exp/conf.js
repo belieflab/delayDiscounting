@@ -12,11 +12,6 @@ const debug = true;
 // Options: "deck", "avatar", "sabotage", "gain", "loss"
 const version = "deck";
 
-const counterbalance = false;
-
-// hard coding a phase will override the randomization
-let phase = undefined;
-
 // General Settings
 const experimentName = "Probabilistic Reversal Learning Task";
 const experimentAlias = `prl_${version}`;
@@ -55,8 +50,8 @@ const pointsPerDollar = 1000;
 
 // Repetitions
 const repetitions = {
-    production: totalTrials,
-    debug: 1,
+    production: 0,
+    debug: 0,
 };
 
 // Contact Information
@@ -74,11 +69,19 @@ const intake = {
 
 // Qualtrics Survey Configuration
 
-const consentLink =
-    "https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_9H0WmX4yKv4jz4a";
+const counterbalance = false;
+
+let phase = undefined;
 
 // Redirect Configuration (Daisy Chaining)
 const urlConfig = {
-  // redirect after experiment ends
-  default: "https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_XXX",
+    // redirect only
+    default: "https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_XXX",
+    // auto-counterbalance
+    standard: {
+        0: "https://taskA",
+        1: "https://questionnaireA",
+        2: "https://taskB",
+        3: "https://questionnaireB",
+    },
 };
